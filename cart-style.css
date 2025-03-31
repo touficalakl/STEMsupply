@@ -58,15 +58,17 @@ input[type="number"] {
 
 .cart-actions {
     margin: 20px 0;
+    padding-left: 800px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 .cart-actions button {
+    color: #fff;
     padding: 8px 14px;
-    border: 1px solid #ccc;
-    background: #f7f7f7;
+    border: 1px solid #007b8f;
+    background: #007b8f;
     cursor: pointer;
 }
 
@@ -103,7 +105,7 @@ input[type="number"] {
 .checkout-btn {
     width: 100%;
     padding: 12px;
-    background-color: #0074cc;
+    background-color: #007b8f;
     color: #fff;
     font-size: 16px;
     border: none;

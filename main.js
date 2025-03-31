@@ -169,3 +169,143 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Load the cart on page load
   loadCart();
+
+
+  /////////
+  // Auto-format credit card input
+const cardInput = document.getElementById("cardNumber");
+cardInput.addEventListener("input", (e) => {
+  let val = e.target.value.replace(/\D/g, "").substring(0, 16); // max 16 digits
+  let formatted = val.replace(/(.{4})/g, "$1 ").trim();
+  e.target.value = formatted;
+});
+
+// Enter key to move to next input
+const inputs = document.querySelectorAll("input");
+inputs.forEach((input, index) => {
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const next = inputs[index + 1];
+      if (next) next.focus();
+    }
+  });
+});
+
+// Submit with loading and confirmation
+document.getElementById("checkoutForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  document.getElementById("loading").classList.remove("hidden");
+  document.getElementById("confirmation").classList.add("hidden");
+
+  setTimeout(() => {
+    document.getElementById("loading").classList.add("hidden");
+    document.getElementById("confirmation").classList.remove("hidden");
+  }, 2000); // simulate 2 seconds processing
+});
+
+
+///////
+  const currencySelect = document.getElementById('currency-select');
+  const prices = document.querySelectorAll('.price');
+
+  currencySelect.addEventListener('change', () => {
+    const currency = currencySelect.value;
+
+    prices.forEach(priceEl => {
+      const usdValue = parseFloat(priceEl.getAttribute('data-usd'));
+
+      if (currency === 'AED') {
+        const converted = (usdValue * 3.66).toFixed(2);
+        priceEl.textContent = `د.إ ${converted}`;
+      } else {
+        priceEl.textContent = `$${usdValue.toFixed(2)}`;
+      }
+    });
+  });
+
+  function performSearch() {
+    const input = document.getElementById("searchInput");
+    const query = input.value.trim().toLowerCase();
+
+    console.log("Searching for:", query); // 🐞 Debug output
+
+    const routes = {
+      science: "science.html",
+      technology: "technology.html",
+      engineering: "engineering.html",
+      mathematics: "mathematics.html"
+    };
+
+    for (let keyword in routes) {
+      if (query.includes(keyword)) {
+        console.log("Redirecting to:", routes[keyword]); // 🐞
+        window.location.href = routes[keyword];
+        return;
+      }
+    }
+
+    alert("No results found.");
+  }
+
+  // Trigger search on Enter
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("searchInput");
+
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        performSearch();
+      }
+    });
+  });
+
+  /*trial*/
+  function loadCartItems() {
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    const cartKey = user ? `cart-${user.email}` : "activeCart";
+    const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+  
+    const tbody = document.getElementById("cartItems");
+    tbody.innerHTML = ""; // Clear previous rows
+  
+    let total = 0;
+  
+    cart.forEach((item, index) => {
+      const subtotal = item.price * item.quantity;
+      total += subtotal;
+  
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td class="item-info">
+          <img src="${item.image || 'placeholder.png'}" alt="${item.name}" style="width:50px;height:50px;margin-right:10px;" />
+          <div>
+            <p class="item-title">${item.name}</p>
+            ${item.code ? `<p>Item#: ${item.code}</p>` : ""}
+            ${item.options ? `<p><strong>Options:</strong> ${item.options}</p>` : ""}
+          </div>
+        </td>
+        <td>$${item.price.toFixed(2)}</td>
+        <td><input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${index}, this.value)"></td>
+        <td>$${subtotal.toFixed(2)}</td>
+        <td><button onclick="removeItemFromCart(${index})" class="delete-btn">Delete</button></td>
+      `;
+      tbody.appendChild(row);
+    });
+  
+    document.getElementById("subtotal").textContent = `$${total.toFixed(2)}`;
+    document.getElementById("total").textContent = `$${total.toFixed(2)}`;
+  }
+  
+
+  function removeItemFromCart(index) {
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    const cartKey = user ? `cart-${user.email}` : "activeCart";
+  
+    const cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+    cart.splice(index, 1); // Remove 1 item at index
+    localStorage.setItem(cartKey, JSON.stringify(cart));
+  
+    loadCartItems(); // Refresh table
+  }
+  

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Currency Conversion Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .price {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Currency Select -->
+  <label for="currency-select">Currency:</label>
+  <select id="currency-select">
+    <option value="USD" selected>USD - U.S. Dollar</option>
+    <option value="AED">AED - UAE Dirham</option>
+  </select>
+
+  <hr/>
+
+  <!-- Example Prices -->
+  <div class="price" data-usd="25.00">$25.00</div>
+  <div class="price" data-usd="40.00">$40.00</div>
+  <div class="price" data-usd="10.00">$10.00</div>
+
+  <!-- Script -->
+  <script>
+    const currencySelect = document.getElementById('currency-select');
+    const prices = document.querySelectorAll('.price');
+
+    currencySelect.addEventListener('change', () => {
+      const currency = currencySelect.value;
+
+      prices.forEach(priceEl => {
+        const usdValue = parseFloat(priceEl.getAttribute('data-usd'));
+
+        if (currency === 'AED') {
+          const aedValue = (usdValue * 3.66).toFixed(2);
+          priceEl.textContent = `د.إ ${aedValue}`;
+        } else {
+          priceEl.textContent = `$${usdValue.toFixed(2)}`;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
