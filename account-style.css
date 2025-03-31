@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #007b8f, #adcdff);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-card {
+    background: white;
+    padding: 30px;
+    width: 330px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .form-card h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .subtext {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .subtext a {
+    color: #007b8f;
+    text-decoration: none;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+  
+  .name-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .name-fields input {
+    flex: 1;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007b8f;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  form button:hover {
+    background-color: #007b8f;
+  }
+  
+  .message {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+
+  .logo {
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 80px;
+    height: auto;
+  }

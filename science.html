@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STEMSupply Navigation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-left">
+      <i class="fas fa-phone"></i> 00971-XXXXXXXXX
+    </div>
+    <div class="top-center">
+      <img src="logostem.jpg" alt="STEMSupply Logo" class="logo" />
+    </div>
+    <div class="top-right" id="userStatus">
+      <a href="signin.html">Sign In</a> or <a href="create-account.html">Create an Account</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="main-nav">
+    <ul class="nav-left">
+      <li class="nav-item">
+        <li class="nav-item" data-name="Science">
+        <a href="science.html">Science</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Microscopes</a></li>
+          <li><a href="#">Chemistry Kits</a></li>
+          <li><a href="#">Physics Tools</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Technology">
+        <a href="technology.html">Technology</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Coding Robots</a></li>
+          <li><a href="#">Circuits</a></li>
+          <li><a href="#">3D Printers</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Engineering">
+            <a href="engineering.html">Engineering</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Bridge Kits</a></li>
+          <li><a href="#">Building Blocks</a></li>
+        </ul>
+    </li>
+        <li class="nav-item" data-name="Mathematics">
+            <a href="mathematics.html">Mathematics</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Measurement Tools</a></li>
+          <li><a href="#">Math Games</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Makerspace">
+        <a href="makerspace.html">Makerspace</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Craft Kits</a></li>
+          <li><a href="#">Electronics</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Afterschool">
+        <a href="afterschool.html">Afterschool</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">STEM Clubs</a></li>
+          <li><a href="#">Programs</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Collaborative Workspace">
+            <a href="collaborative.html">Collaborative Workspace</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Desks</a></li>
+          <li><a href="#">Boards</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Outdoor Classroom">
+        <a href="outdoor.html">Outdoor Classroom</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Gardening</a></li>
+          <li><a href="#">Exploration Kits</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="About Us">
+        <a href="about.html">About Us</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="nav-right">
+      <input type="text" placeholder="Search entire store here..." class="search-input" />
+      <i class="fas fa-search search-icon"></i>
+      <a href="cart.html">
+      <i class="fas fa-shopping-cart cart-icon"></i>
+    </a>
+    </div>
+  </nav>
+<section class="about-section">
+    <div class="about-container">
+      <h1>Science</h1>
+      <p>
+        Discover hands-on science tools and kits designed to inspire curiosity, critical thinking, and experimentation. From chemistry 
+        sets to biology models, our STEMSupply science resources support students in exploring the natural world through engaging, real-world 
+        learning experiences.
+      </p>
+    </div>
+  </section>
+
+  <section class="category-showcase">
+    <div class="category-header">
+      <h2>Shop by Category</h2>
+    </div>
+  
+    <div class="category-circles">
+      <div class="circle-item">
+        <a href="earth-space.html" class="circle-item">
+            <img src="earthandscience.png" alt="Earth & Space Science">
+            <p>Earth & Space Science</p>
+          </a>
+      </div>
+      <div class="circle-item">
+        <a href="electricity.html" class="circle-item">
+            <img src="electricity.png" alt="Electricity & Circuits">
+            <p>Electricty & Circuits</p>
+          </a>
+      </div>
+      <div class="circle-item">
+        <a href="labequipment.html" class="circle-item">
+            <img src="labequipment.png" alt="Lab Equipment">
+            <p>Lab Equipment & Supplies</p>
+          </a>
+      </div>
+      <div class="circle-item">
+        <a href="lifescience.html" class="circle-item">
+            <img src="lifescience.png" alt="Life Science">
+            <p>Life Science</p>
+          </a>          </div>
+      <div class="circle-item">
+        <a href="physical-science.html" class="circle-item">
+            <img src="physicalscience.png" alt="Physical Science">
+            <p>Physical Science</p>
+          </a>
+      </div>
+      
+    </div>
+  </section>
+  
+<div class="product-grid">
+  <!-- Product 1 -->
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthquake-engineering.png" alt="STEM Earth Kit" />
+        <h4>Start to STEM Earth and Space Science Kits</h4>
+        <p class="price">As low as <strong>$3,999.00</strong></p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          A comprehensive kit with earth, space, and science materials for classroom-wide hands-on STEM learning.
+        </p>
+        <button onclick="addToCart('Snap Circuits Experiments Kits', 44.95, 'images/kit1.jpg', '35-217', '100 Experiments')">
+          <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Product 2 -->
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthquake-engineering.png" alt="STEM Earth Kit" />
+        <h4>Start to STEM Earth and Space Science Kits</h4>
+        <p class="price">As low as <strong>$3,999.00</strong></p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          A comprehensive kit with earth, space, and science materials for classroom-wide hands-on STEM learning.
+        </p>
+        <button onclick="addToCart('Snap Circuits Experiments Kits', 44.95, 'images/kit1.jpg', '35-217', '100 Experiments')">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Product 3 -->
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthquake-engineering.png" alt="STEM Earth Kit" />
+        <h4>Start to STEM Earth and Space Science Kits</h4>
+        <p class="price">As low as <strong>$3,999.00</strong></p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          A comprehensive kit with earth, space, and science materials for classroom-wide hands-on STEM learning.
+        </p>
+        <button onclick="addToCart('Snap Circuits Experiments Kits', 44.95, 'images/kit1.jpg', '35-217', '100 Experiments')">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Product 4 -->
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthquake-engineering.png" alt="STEM Earth Kit" />
+        <h4>Start to STEM Earth and Space Science Kits</h4>
+        <p class="price">As low as <strong>$3,999.00</strong></p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          A comprehensive kit with earth, space, and science materials for classroom-wide hands-on STEM learning.
+        </p>
+        <button onclick="addToCart('Snap Circuits Experiments Kits', 44.95, 'images/kit1.jpg', '35-217', '100 Experiments')">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthquake-engineering.png" alt="STEM Earth Kit" />
+        <h4>Start to STEM Earth and Space Science Kits</h4>
+        <p class="price">As low as <strong>$3,999.00</strong></p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          A comprehensive kit with earth, space, and science materials for classroom-wide hands-on STEM learning.
+        </p>
+        <button onclick="addToCart('Snap Circuits Experiments Kits', 44.95, 'images/kit1.jpg', '35-217', '100 Experiments')">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</section>
+</div>
+<script src="main.js"></script>
+</body>
