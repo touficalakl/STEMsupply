@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STEMSupply Navigation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-left">
+      <i class="fas fa-phone"></i> 00971-XXXXXXXXX
+    </div>
+    <div class="top-center">
+      <img src="logostem.jpg" alt="STEMSupply Logo" class="logo" />
+    </div>
+    <div class="top-right" id="userStatus">
+      <a href="signin.html">Sign In</a> or <a href="create-account.html">Create an Account</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="main-nav">
+    <ul class="nav-left">
+      <li class="nav-item">
+        <li class="nav-item" data-name="Science">
+            <a href="science.html">Science</a>
+            <ul class="dropdown-menu">
+              <li><a href="earth-space.html">Earth and Space Science</a></li>
+              <li><a href="electricity.html">Electricity and Circuits</a></li>
+              <li><a href="labequipment.html">Lab Equipment and Supplies</a></li>
+              <li><a href="lifescience.html">Life Science</a></li>
+              <li><a href="physicalscience.html">Physical Science</a></li>
+            </ul>
+          </li>
+            <li class="nav-item" data-name="Technology">
+            <a href="technology.html">Technology</a>
+            <ul class="dropdown-menu">
+              <li><a href="3dprinting.html">3D Printing</a></li>
+              <li><a href="coding.html">Coding</a></li>
+              <li><a href="drones.html">Drones</a></li>
+              <li><a href="media-production.html">Media Production and Virtual Reality</a></li>
+              <li><a href="robotics.html">Robotics</a></li>
+            </ul>
+          </li>
+            <li class="nav-item" data-name="Engineering">
+                <a href="engineering.html">Engineering</a>
+            <ul class="dropdown-menu">
+              <li><a href="buildingsupplies.html">Building Supplies</a></li>
+              <li><a href="hydraulics.html">Hydraulics</a></li>
+              <li><a href="renewable-eergy.html">Renewable Energy</a></li>
+              <li><a href="structures.html">Structures</a></li>
+              
+            </ul>
+        </li>
+            <li class="nav-item" data-name="Mathematics">
+                <a href="mathematics.html">Mathematics</a>
+            <ul class="dropdown-menu">
+              <li><a href="geometry.html">Geometry</a></li>
+              <li><a href="mathgames.html">Math Games</a></li>
+              <li><a href="measurements.html">Measurements</a></li>
+              <li><a href="operations.html">Operations</a></li>
+              <li><a href="timeandmoney.html">Time And Money</a></li>
+            </ul>
+          </li>
+        <li class="nav-item" data-name="Makerspace">
+        <a href="makerspace.html">Makerspace</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Craft Kits</a></li>
+          <li><a href="#">Electronics</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Afterschool">
+        <a href="afterschool.html">Afterschool</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">STEM Clubs</a></li>
+          <li><a href="#">Programs</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Collaborative Workspace">
+            <a href="collaborative.html">Collaborative Workspace</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Desks</a></li>
+          <li><a href="#">Boards</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="Outdoor Classroom">
+        <a href="outdoor.html">Outdoor Classroom</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Gardening</a></li>
+          <li><a href="#">Exploration Kits</a></li>
+        </ul>
+      </li>
+        <li class="nav-item" data-name="About Us">
+        <a href="about.html">About Us</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="nav-right">
+      <input type="text" id="searchInput" placeholder="Search entire store here..." class="search-input" />
+      <i class="fas fa-search search-icon" onclick="performSearch()"></i>
+      <a href="cart.html">
+      <i class="fas fa-shopping-cart cart-icon"></i>
+    </a>
+    </div>
+  </nav>
+<section class="about-section">
+    <div class="about-container">
+      <h1>Lab Equipment and Supplies</h1>
+      <p>
+        Lab equipment and supplies are essential for conducting precise experiments and advancing scientific research. 
+        At STEMSupply, we prioritize the availability and efficiency of procurement for a wide range of laboratory tools 
+        and materials. Our platform ensures that educational institutions, research facilities, and laboratories can access 
+        high-quality, reliable equipment quickly, supporting the work of scientists, engineers, and students alike. By 
+        streamlining the supply chain, we help foster innovation and discovery, enabling the next generation of breakthroughs 
+        in science and technology.
+      </p>
+    </div>
+  </section>
+
+  <section class="category-showcase">
+    <div class="category-header">
+      <h2>Shop by Category</h2>
+    </div>
+  
+    <div class="category-circles">
+      <div class="circle-item">
+        <a href="earth-space.html" class="circle-item">
+            <img src="earthandscience.png" alt="Earth & Space Science">
+            <p>Earth & Space Science</p>
+          </a>
+      </div>
+      <div class="circle-item">
+        <a href="electricity.html" class="circle-item">
+            <img src="electricity.png" alt="Electricity & Circuits">
+            <p>Electricty & Circuits</p>
+          </a>
+      </div>
+      <div class="circle-item">
+        <a href="labequipment.html" class="circle-item">
+            <img src="labequipment.png" alt="Lab Equipment">
+            <p>Lab Equipment & Supplies</p>
+          </a>
+      </div>
+      <div class="circle-item">
+        <a href="lifescience.html" class="circle-item">
+            <img src="lifescience.png" alt="Life Science">
+            <p>Life Science</p>
+          </a>          
+        </div>
+      <div class="circle-item">
+        <a href="physical-science.html" class="circle-item">
+            <img src="physicalscience.png" alt="Physical Science">
+            <p>Physical Science</p>
+          </a>
+      </div>
+      
+    </div>
+  </section>
+  
+<div class="product-grid">
+  <!-- Product 1 -->
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthandspaceitem1.PNG" alt="Earth and Space Science Class Pack" />
+        <h4>Earth and Space Science Class Pack</h4>
+        <p class="price">$1,149.00</p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          Engage students in earth science and astronomy with a bundle that is out of this world!
+        </p>
+        <button onclick="addToCart('Earth and Space Science Class Pack', 1149, 'earthandspaceitem1.PNG', '35-010','')">
+          <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Product 2 -->
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthandspaceitem2.PNG" alt="Human Activity and Environment Kit" />
+        <h4>Human Acitivity and Environment Kit</h4>
+        <p class="price">$149.00</p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          Active lessons demonstrate the impact of humans and the environment.
+        </p>
+        <button onclick="addToCart('Human Activity and Environment Kit', 149, 'earthandspaceitem2.PNG', '35-110', '')">
+          <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthandspaceitem3.PNG" alt="Soil Analysis Kits" />
+        <h4>Soil Analysis Kits</h4>
+        <p class="price">$489.00</p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          Dig into 7 soil analysis experiments designed to expose scientific properties of loam, silt, clay, sand, and other types of soil!</p>
+        <button onclick="addToCart('Soil Analysis Kits', 489, 'earthandspaceitem3.PNG', '35-217', '')">
+          <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+    <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthandspaceitem4.PNG" alt="SolarStudy Set" />
+        <h4>SolarStudy Set</h4>
+        <p class="price">$199.00</p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          Keep students active while exploring the position and motion of planets in our solar system!</p>        </p>
+        <button onclick="addToCart('SolarStudy Set', 199, 'earthandspaceitem4.PNG', '35-229', '')">
+          <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+    <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthandspaceitem5.PNG" alt="STEM Earth Kit" />
+        <h4>Volcanic Eruptions Kit</h4>
+        <p class="price">$229.00</p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          Become a volcanologist creating your own volcano and witnessing an eruption right before your eyes!        </p>
+        <button onclick="addToCart('Volcanic Eruptions Kit', 229, 'earthandspaceitem5.PNG', '35-217', '')">
+          <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" onclick="this.classList.toggle('flipped')">
+    <div class="flip-inner">
+      <!-- Front side -->
+      <div class="flip-front">
+        <img src="earthandspaceitem6.PNG" alt="Soil Analysis Refill Kit" />
+        <h4>Soil Analysis Refill Kit</h4>
+        <p class="price">$199.00</p>
+      </div>
+  
+      <!-- Back side -->
+      <div class="flip-back">
+        <p>
+          Replenish a Soil Analysis Kit for further experimentation.</p>
+        <button onclick="addToCart('Soil Analysis Refill Kit', 199, 'earthandspaceitem6.PNG', '35-589', '')">
+          <i class="fas fa-shopping-cart cart-icon"></i>Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+</div>
+<footer class="site-footer">
+  <div class="back-to-top">
+  </div>
+
+  <div class="footer-content">
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>Get to Know Us</h4>
+        <ul>
+          <li><a href="#">About STEMSupply</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Work With Us</h4>
+        <ul>
+          <li><a href="#">Become a Partner</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+          <li><a href="#">Promote STEM</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <img src="logostem.jpg" alt="STEMSupply Logo" class="footer-logo" />
+    <div class="footer-meta">
+      <select>
+        <option>English</option>
+      </select>
+      <select>
+        <option>USD - U.S. Dollar</option>
+        <option>AED - AED Dirhams</option>
+      </select>
+      <select>
+        <option>United States</option>
+      </select>
+    </div>
+    <p>© 2025 STEMSupply. All rights reserved.</p>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
+
